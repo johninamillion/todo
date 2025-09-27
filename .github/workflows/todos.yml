@@ -28,4 +28,4 @@ jobs:
         run: composer install --no-progress --optimize-autoloader --prefer-dist
 
       - name: Run todo CLI
-        run: composer run todo --fail-on-bugs --fail-on-fixes --quiet
+        run: .bin/todo --exclude=tests --fail-on-bugs --fail-on-fixes --quiet
