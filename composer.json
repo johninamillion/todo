@@ -1,0 +1,49 @@
+{
+    "name": "johninamillion/todo",
+    "description": "A powerful CLI tool to scan your source code for open tasks — with user filtering, Git integration, and customizable reporting.",
+    "version": "0.1.0",
+    "authors": [
+        {
+            "name": "johninamillion",
+            "email": "john@millionvisions.de"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "johninamillion\\ToDo\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "johninamillion\\ToDo\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": "^8.3",
+        "johninamillion/php-git": "^0.1.0",
+        "symfony/console": "^6.2|^7.0",
+        "symfony/process": "^6.2|^7.0"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest",
+        "johninamillion/php-code-styles": "^0.2.0",
+        "phpunit/phpunit": "^12.0"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "johninamillion\\CodeStyles\\Composer::install"
+        ],
+        "post-update-cmd": [
+            "johninamillion\\CodeStyles\\Composer::update"
+        ],
+        "code:analyse": "./vendor/bin/phpstan analyse",
+        "code:format": "./vendor/bin/php-cs-fixer fix",
+        "test": "./vendor/bin/phpunit --testdox",
+        "test:coverage": "./vendor/bin/phpunit --coverage-php src/",
+        "todo": "./bin/todo --display-time --exclude=tests",
+        "todo:me": "./bin/todo --me --display-time --exclude=tests"
+    },
+    "bin": [
+        "bin/todo"
+    ]
+}

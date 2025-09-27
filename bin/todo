@@ -1,0 +1,18 @@
+#!/usr/bin/env php
+<?php
+
+$projectAutoloaderPath = __DIR__ . '/../vendor/autoload.php';
+$packageAutoloaderPath = __DIR__ . '/../../../autoload.php';
+
+file_exists($projectAutoloaderPath)
+    ? require $projectAutoloaderPath
+    : require $packageAutoloaderPath;
+
+use johninamillion\ToDo\Commands\ScanCommand;
+use Symfony\Component\Console\Application;
+
+$scanCommand = new ScanCommand();
+$app = new Application('ToDo CLI by johninamillion', '0.1.0');
+$app->add($scanCommand);
+$app->setDefaultCommand($scanCommand->getName(), true);
+$app->run();
