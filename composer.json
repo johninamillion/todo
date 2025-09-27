@@ -1,11 +1,12 @@
 {
     "name": "johninamillion/todo",
     "description": "A powerful CLI tool to scan your source code for open tasks — with user filtering, Git integration, and customizable reporting.",
+    "license": "MIT",
     "version": "0.1.0",
     "authors": [
         {
             "name": "johninamillion",
-            "email": "john@millionvisions.de"
+            "email": "git@millionvisions.de"
         }
     ],
     "autoload": {
