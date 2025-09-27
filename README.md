@@ -1,8 +1,10 @@
-# johninamillion/todo
+# ToDo
 ### A powerful CLI tool to scan your source code for open tasks.
 
 [![Tests](https://github.com/johninamillion/todo/actions/workflows/tests.yml/badge.svg)](https://github.com/johninamillion/todo/actions/workflows/tests.yml)
 [![ToDos](https://github.com/johninamillion/todo/actions/workflows/todos.yml/badge.svg)](https://github.com/johninamillion/todo/actions/workflows/todos.yml)
+[![License](https://img.shields.io/packagist/l/johninamillion/todo)](https://github.com/johninamillion/todo/blob/master/LICENSE)
+[![Version](https://img.shields.io/packagist/v/johninamillion/todo)](https://packagist.org/packages/johninamillion/todo)
 
 ---
 
